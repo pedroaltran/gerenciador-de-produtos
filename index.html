@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="main.js" defer></script>
+    <title>CRUD</title>
+</head> 
+<body>
+    <header>
+        <h1 class="header-title"> StockOnline </h1>
+    </header>
+    <main>
+        <div>
+            <h2><b>Procurar produtos: </b></h2>
+            <br>
+            <input type="text" class="modalSearch-field"placeholder="Digite o nome do produto: ">
+            <button type="button" class="button green">OK</button>
+            <br><br>
+            <div> 
+            <h2><b>Cadastrar produtos: </b></h2>    
+            <button type="button" class="button blue mobile" id="insertProduct">Cadastrar </button>            
+            </div>
+        </div>
+        
+        <table class="records" id="tblDados">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+
+            </thead>
+            
+            <tbody>
+                <tr>
+                <td>1</td>
+                <td>Coca-Cola</td>
+                <td>Bebidas</td>
+                <td>2</td>
+                <td>95</td>
+                <td>
+                    <button type="button" class="button green">Editar</button>
+                    <button type="button" class="button red">Excluir</button>
+                </td>
+                </tr>
+                    <tr>
+                    <td>2</td>
+                    <td>Camiseta Tamanho M</td>
+                    <td>Roupas</td>
+                    <td>5</td>
+                    <td>123</td>
+                    <td>
+                        <button type="button" class="button green">Editar</button>
+                        <button type="button" class="button red">Excluir</button>
+                    </td>
+                    </tr>    
+                    <tr>
+                        <td>3</td>
+                        <td>Kit Kat</td>
+                        <td>Comidas</td>
+                        <td>2</td>
+                        <td>35</td>
+                        <td>
+                            <button type="button" class="button green">Editar</button>
+                            <button type="button" class="button red">Excluir</button>
+                        </td>
+                        </tr>       
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo produto</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form class="modal-form">
+                    <h4>Codigo:
+                    <input type="text" id="idProd" class="modal-field" required >
+                    </h4>
+                    <br><br><br>
+
+                    <h4> Nome: 
+                    <input type="text" id="nameProd" class="modal-field" required>    
+                    </h4>
+                    
+                    <h4> Categoria:
+                        <select id="cateProd">
+                            <option> Roupas </option>
+                            <option> Comidas </option>
+                            <option> Bebidas </option>
+                            <option> Ferramentas </option>
+                            <option> Eletronicos </option>
+                            <option> Utensilios </option>
+                            <option> Outros </option>
+                        </select>
+                    </h4>
+                    
+                    <h4> Preço:
+                    <input type="text" id="priceProd" class="modal-field" >
+                    </h4>
+                    
+                    <h4> Quantidade:
+                    <input type="text" id="qtdProd" class="modal-field">
+                    </h4>
+                    
+                </form>
+                <footer class="modal-footer">
+                    <input type="button" value="Cadastrar" class="button green">
+                    <input type="button" value="Cancelar" class="button blue">
+                </footer>
+            </div>            
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Pedro Eduardo Altran
+    </footer>
+
+</body>
+</html>
